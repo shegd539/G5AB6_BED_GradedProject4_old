@@ -24,28 +24,28 @@
 
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed"
-					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-					aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#" th:href="@{/}">Registration and
-					Login</a>
-					<div id="navbar" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav">
-					<li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
-				</ul>
-				
-				<a class="navbar-brand" href="#" th:href="@{/searchByorder}">Search Employee By Order</a>
-			</div>
-			</div>
-			
-		</div>
-	</nav>
+    <div class="container">
+        <div class="navbar-header">
+
+            <a class="navbar-brand" href="#" th:href="@{/}">Registration and
+                Login</a>
+            <a href="#" th:href="@{/searchByorder}">Search Employee By Order</a>&nbsp;|&nbsp;
+           
+            
+            <tbody>
+				<tr th:each="ticket : ${listofAllEmployee}">
+					<span th:if="${ticket.role == 'admin'}">
+					<td> <a th:href="@{/addadminemployee}" class="btn btn-primary">Add Employee </a>
+					</td>
+					</span>
+            </tr>
+            </tbody>
+             <a href="#" th:href="@{/logout}">Logout</a>
+        </div>
+    </div>
+
+    </div>
+</nav>
 	<div class="container my-2">
 		
 		<div><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Employee Firstname here"></div>
