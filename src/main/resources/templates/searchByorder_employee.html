@@ -26,6 +26,7 @@
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
+			<!--  -->
 				<button type="button" class="navbar-toggle collapsed"
 					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
 					aria-controls="navbar">
@@ -46,11 +47,16 @@
 		   
 		
 	<div class="container my-2">
+	<ul class="nav navbar-nav">
+					<li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+				</ul>
+				
 		<form th:action="@{/searchEmployeeorder}" method="post" th:object="${listofAllOrderEmployee}" >
 		<div>
-		<label class="control-label" for="role">Search By Employee order  Assesnding or Descending </label> 
+		
 		<div class="form-group">
-						<label for="username"> Order By Assesnding or Descending </label> : <input type="text"
+					<center><label class="control-label" for="role">Search By Employee order  Assesnding or Descending </label>  :</center>
+					 <input type="text"
 							class="form-control" id="orderBy" name="orderBy"
 							placeholder="Enter orderBy " autofocus="autofocus">
 					</div>
@@ -89,7 +95,17 @@
 					 
 				</tr>
 			</tbody>
+			
 		</table>
+		
+		<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+		<a th:href="@{/}"> Back to Employee List</a>
 		</form>
 	</div>
 </body>
