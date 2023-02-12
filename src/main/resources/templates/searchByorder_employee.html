@@ -46,11 +46,11 @@
 		   
 		
 	<div class="container my-2">
-		<form th:action="@{/searchEmployeeorder}" method="post" th:field="*{searchEmployeeorder}" >
+		<form th:action="@{/searchEmployeeorder}" method="post" th:object="${listofAllOrderEmployee}" >
 		<div>
-		<label class="control-label" for="role">Search By Employee order </label> 
+		<label class="control-label" for="role">Search By Employee order  Assesnding or Descending </label> 
 		<div class="form-group">
-						<label for="username"> Order </label> : <input type="text"
+						<label for="username"> Order By Assesnding or Descending </label> : <input type="text"
 							class="form-control" id="orderBy" name="orderBy"
 							placeholder="Enter orderBy " autofocus="autofocus">
 					</div>
@@ -63,7 +63,7 @@
 							
 							 -->
 				<div class="form-group">
-						<button type="submit" class="btn btn-primary">Search by Order Here</button>
+						<button type="submit" class="btn btn-primary">Order By Assesnding or Descending</button>
 						
 					</div>			
 		</div>
