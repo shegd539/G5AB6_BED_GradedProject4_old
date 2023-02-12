@@ -96,5 +96,9 @@ public class HomeController {
 		  return "searchByorder_employee";
 	  }
 	   
-	  
+	  @GetMapping("/addadminemployee")
+	  public String addadminemployee(@ModelAttribute("addadminuser") UserRegistrationDto registrationDto) {
+		
+		  return "addadmin_employee";
+	  }
 }

@@ -51,7 +51,7 @@
 
 				<h1>Registration</h1>
 
-				<form th:action="@{/registration}" method="post" th:object="${user}">
+				<form th:action="@{/registration}" method="post" th:object="${addadminuser}">
 					<div class="form-group">
 						<label class="control-label" for="firstName"> First Name </label>
 						<input id="firstName" class="form-control" th:field="*{firstName}"
@@ -74,13 +74,13 @@
 						<label class="control-label" for="password"> Password </label> 
 						<input
 							id="password" class="form-control" type="password"
-							th:field="*{password}" required autofocus="autofocus"  />
+							th:field="*{password}" required autofocus="autofocus" />
 					</div>
 					
 					<div class="form-group">
 						<label class="control-label" for="role"> Employee Role </label> 
 						 <select name="role" id="role" th:field="*{role}" >
-							  <option value="user">USER</option>
+							  <option value="USER">USER</option>
 							  <option value="admin">ADMIN</option>
 							 
 							</select>
@@ -89,8 +89,7 @@
 
 					<div class="form-group">
 						<button type="submit" class="btn btn-primary">Register</button>
-						<span>Already registered? <a href="/" th:href="@{/login}">Login
-								here</a></span>
+						
 					</div>
 				</form>
 			</div>

@@ -21,9 +21,19 @@
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-		<a class="navbar-brand" th:href="@{/}">Employee Tracking Application</a>
-	</nav>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+
+            <a class="navbar-brand" href="#" th:href="@{/}">Registration and
+                Login</a>
+            <a href="#" th:href="@{/searchByorder}">Search Employee By Order</a>&nbsp;|&nbsp;
+            <a href="#" th:href="@{/logout}">Logout</a>
+        </div>
+    </div>
+
+   
+</nav>
 	<div class="container">
 		<h3 class="text-center">Update Employee Record</h3>
 		<div class="row">
@@ -33,19 +43,19 @@
 					<!-- Add hidden form field to handle update -->
 					<input type="hidden" th:field="*{id}" />
 					<div class="form-group">
-						<label>Employee FirstName:</label> <input type="text" th:field="*{firstName}" class="form-control">
+						<label>Employee FirstName:</label> <input type="text" th:field="*{firstName}" class="form-control" autocomplete="off">
 					</div>
 					
 					<div class="form-group">
 						<label>Employee Last Name</label> <input type="text" th:field="*{lastName}"
-							class="form-control">
+							class="form-control" autocomplete="off">
 					</div>
 					<div class="form-group">
 						<label>Employee Email</label> <input type="text" th:field="*{email}"
-							class="form-control">
+							class="form-control" autocomplete="off">
 					</div>
 					<div class="form-group">
-						<label>Employee Password</label> <input type="text" th:field="*{password}"
+						<label>Employee Password</label> <input type="text" th:field="*{password}" autocomplete="off"
 							class="form-control">
 					</div>
 					<!-- 
