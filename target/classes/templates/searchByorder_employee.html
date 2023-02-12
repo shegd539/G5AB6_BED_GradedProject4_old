@@ -39,31 +39,22 @@
 		   
 		
 	<div class="container my-2">
-	<ul class="nav navbar-nav">
-					<li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
-				</ul>
+	
 				
 		<form th:action="@{/searchEmployeeorder}" method="post" th:object="${listofAllOrderEmployee}" >
 		<div>
 		
 		<div class="form-group">
-					<center><label class="control-label" for="role">Search By Employee order  Assesnding or Descending </label>  :</center>
+					<center><label class="control-label" for="role">Search By Employee order  asc or desc </label>  :</center>
 					
 					<!--  -->
 					 <input type="text"
 							class="form-control" id="orderBy" name="orderBy"
-							placeholder="Enter orderBy " autofocus="autofocus">
+							placeholder="Enter orderBy asc or desc" autofocus="autofocus">
 					</div>
-		<!-- 
-						<select name="searchEmployeeorder" id="searchEmployeeorder" form="searchEmployeeorder" th:value="${searchEmployeeorder}">
-							  <option value="ASC" th:text="ASC">ASC</option>
-							  <option value="DESC" th:text="DESC">DESC</option>
-							 
-							</select>
-							
-							 -->
+	
 				<div class="form-group">
-						<button type="submit" class="btn btn-primary">Order By Assesnding or Descending</button>
+						<button type="submit" class="btn btn-primary">Enter Order By Assesnding or Descending</button>
 						
 					</div>			
 		</div>
